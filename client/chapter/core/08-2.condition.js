@@ -54,14 +54,14 @@ let pw = prompt('비밀번호 입력해주세요','1')
     alert('취소되었습니다.')
   } */
 
+
+
   let userName = prompt('사용자 아이디를 입력해주세요.','');
-  let pw;
 
-  console.log(userName);
-
-  if(userName == String('Admin')){
+  if(userName?.toLowerCase() == String('admin')){
     let pw = prompt('비밀번호를 입력해주세요.','');
-    if(pw == 'TheMaster'){
+
+    if(pw?.toLowerCase() == 'themaster'){
     console.log(`확인됐습니다`)
     } else {
       console.log(`취소됐습니다.`);
