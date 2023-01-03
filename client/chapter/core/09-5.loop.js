@@ -76,3 +76,17 @@ const randomUser = {
 // - for ~ in 문
 // - for ~ of 문
 // - 성능 비교 진단
+
+
+
+
+
+
+
+for(let key in randomUser) {
+
+  let L1 = randomUser[key]
+
+  if({}.hasOwnproperty.call(randomUser,key))
+  // console.log(key);
+}
