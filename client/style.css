@@ -36,22 +36,33 @@ span.is-active{
 }
 
 
+
 .ground{
-  width:  600px;
+  width: 600px;
   height: 400px;
   background: greenyellow;
   border: 10px solid black;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-
+  transform: translate(-50%,-50%);
 }
 
+
+
 .ball{
-  transition: all ;
+  transition: all .3s;
   pointer-events: none;
-} 
+}
+
+
+
+.emotion{
+  font-size: 50px;
+  position: absolute;
+  pointer-events: none;
+}
+
 
 
 .visual{
@@ -59,8 +70,9 @@ span.is-active{
   background-color: dodgerblue;
 }
 
+
 .news{
-  padding: 1rem;
+  padding:1rem;
   background-color: orange;
 }
 
@@ -68,6 +80,8 @@ span.is-active{
   padding: 1rem;
   background-color: hotpink;
 }
+
+
 
 .pop{
   width: 30vw;
@@ -78,3 +92,14 @@ span.is-active{
   background-color: rgba(0,0,0,0.5);
   display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
