@@ -6,21 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./style.css" />
   <!-- <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script> -->
-  <script defer src="./chapter/core/19.tryCatch.js"></script>
+
+  <script src="./lib/dom/getNode.js"></script>
+  <script src="./lib/dom/insert.js"></script>
+  <script src="./lib/error/typeError.js"></script>
+  <script defer src="./main.js"></script>
   
-  <title>javascript core</title>
+  <title>calculator</title>
 </head>
 <body>
   
 
-  <h1>
-    <span class="first">hello</span>
-    <!-- 주석이지롱 -->
-
+  <form class="calculator">
+    <div class="first">
+      <label for="firstNumber">First Value</label>
+      <input type="number" name="first" id="firstNumber" required/>
+    </div>
     
-    <span class="second">world</span>
-  </h1>
+    <div class="operator"> 
+     +
+    </div>
+    
+    <div class="second">
+      <label for="secondNumber">Second Value</label>
+      <input type="number" name="second" id="secondNumber" required/>
+    </div>
+  
+    <input id="done" type="submit" value="done"/>
 
+    <div class="result">
+      -
+    </div>
+
+  </form>
 
 </body>
 </html>
