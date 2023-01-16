@@ -1,5 +1,6 @@
+/* global gsap */
 
-import {  insertLast, getInputValue, getNode, getRandom, clearContents, refError, isNumbericString, showAlert, addClass, removeClass } from "./lib/index.js";
+import {  copy, insertLast, getInputValue, getNode, getRandom, clearContents, refError, isNumbericString, showAlert, addClass, removeClass } from "./lib/index.js";
 
 import { jujeobData } from "./data/data.js";
 
@@ -20,20 +21,28 @@ function clickSubmitHandler(e){
   let pick = list[getRandom(list.length-1)];
 
 
-/*   if (!name) {
-    showAlert('.alert-error', '제대로된 이름을 입력해주세요.','1500');
+  if (!name) {
+    showAlert('.alert-error', '잘못된 정보입니다.','2000');
+    gsap.fromTo(resultArea, 0.01, {x:-5}, {x:5, clearProps:"x", repeat:20})
+
+
+/*     addClass(resultArea,'shake')
+    setTimeout(() => {
+      removeClass(resultArea,'shake')
+    }, 1000); */
+
     return 
   }
 
   if(isNumbericString(name)){
+    showAlert('.alert-error', '정확한 이름을 입력해주세요.','1500');
+    return 
+  }
+
+/*   if (!name || isNumbericString(name) ) {
     showAlert('.alert-error', '제대로된 이름을 입력해주세요.','1500');
     return 
   } */
-
-  if (!name || isNumbericString(name) ) {
-    showAlert('.alert-error', '제대로된 이름을 입력해주세요.','1500');
-    return 
-  }
 
 
 
@@ -46,5 +55,16 @@ function clickSubmitHandler(e){
   
  }
 
+ function clickCopyHandler(){
+  let text = resultArea.textContent
+  // navigator.clipboard.writeText(text)
+  copy(text).then(()=>{
+    showAlert('.alert-success','클립보드 복사가 완료됐습니다',1500)
+  })
+  
+ }
+
+
 
 submit.addEventListener('click', clickSubmitHandler)
+resultArea.addEventListener('click', clickCopyHandler)
