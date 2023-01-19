@@ -73,7 +73,7 @@ attr()
  */
 
 
-
+//!getAttr 역할은 node가 속한 prop 값을 출력하는 것이다.
 function getAttr(node, prop) {
   // node = '.first'
   // prop = 'class'
@@ -85,6 +85,10 @@ function getAttr(node, prop) {
   return node.getAttribute(prop);
 }
 
+
+
+
+//! 중간에 includes 이해 못함 ..ㅠㅠ
 // computed property
 function setAttr(node, prop, value) {
   // validation : 확인

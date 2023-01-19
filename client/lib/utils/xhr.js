@@ -242,7 +242,6 @@
     })
   }
   
-  
   xhrPromise.post = (url,body) => {
     return xhrPromise({
       url,
